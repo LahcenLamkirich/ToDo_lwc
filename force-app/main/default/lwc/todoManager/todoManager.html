@@ -1,13 +1,19 @@
 <template>
-  <lightning-layout
-    class="slds-grid_align-center slds-text-align_center container"
-    multiple-rows
-  >
-    <lightning-layout-item size="12" class="time">
-      8:12 PM
-    </lightning-layout-item>
-    <lightning-layout-item size="12" class="greeting">
-      Good Evening ! !
+  <lightning-layout>
+    <lightning-layout-item>
+      <lightning-input
+        type="text"
+        placeholder="Enter the name of the task"
+        value={taskName}
+        variant="label-hidden"
+      ></lightning-input>
+      <lightning-button
+        variant="brand"
+        label="Brand"
+        title="Primary action"
+        onclick={handleClick}
+        class="slds-m-left_x-small"
+      ></lightning-button>
     </lightning-layout-item>
   </lightning-layout>
 </template>
